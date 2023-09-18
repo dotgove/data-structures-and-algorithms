@@ -44,3 +44,38 @@ function printAtMost5(n) {
 ```
 
 Despite the value of n, The above function loops and prints over at most 5 times. So its complexity is O(1)
+
+## Space Complexity
+
+### Auxillary Space Complexity
+
+Sometimes the term auxillary space complexity is referred to the space required by the input algorithm, not including space taken up by the input arguments.
+
+### Examples:
+
+#### Sum of elements
+
+```go
+func sumOfElements(nums []int)(total int){
+    for i:=0 ; i <=len(nums) ; i++{
+        total+= nums[i]
+    }
+    return
+}
+```
+
+In the above program no new variable is being created by the program. The Space complexity therefore is O(1)
+
+#### Double Elements
+
+```go
+func doubleElements(nums []int) []int {
+	result := make([]int, len(nums))
+	for i, n := range nums {
+		result[i] += n * 2
+	}
+	return result
+}
+```
+
+In the above code the space complexity is directly proportionate to the size of input. The complexity is O(n)
